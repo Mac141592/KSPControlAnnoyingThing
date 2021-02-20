@@ -92,6 +92,7 @@ def on_release(key):
         key))
     # Checks for gradual throttle up
     if key == Key.shift:
+        time.sleep(2)
         num = random.randrange(0,10,1)
         print(num)
         if num > 6:
@@ -102,6 +103,7 @@ def on_release(key):
             loop_six()
     # Checks for quicksave
     if key == Key.f5:
+        time.sleep(5)
         num = random.randrange(0,10,1)
         print(num)
         if num > 5:
@@ -117,6 +119,7 @@ def on_release(key):
 
     # This checks for sideways movement to the right (direction to orbit in
     if key == KeyCode.from_char('d'):
+        time.sleep(random.randrange(0,5,1))
         num = random.randrange(0,10,1)
         print(num)
         if num > 7:
@@ -129,6 +132,7 @@ def on_release(key):
             tab_out()
     # I have literally no idea what this is checking for ## I found out. Its translate forward
     if key == KeyCode.from_char('h'):
+        time.sleep(random.randrange(0, 5, 1))
         keyboard.press('r')
         iva()
     # Checking for directional movement
@@ -136,18 +140,21 @@ def on_release(key):
         pass
     # Check for time warping
     if key == KeyCode.from_char('.'):
+        time.sleep(random.randrange(0, 5, 1))
         num = random.randrange(0,5,1)
         print(num)
         if num > 2:
             loop_five()
             iva()
     if key == KeyCode.from_char(','):
+        time.sleep(random.randrange(0, 5, 1))
         num = random.randrange(0,5,1)
         if num > 2:
             loop_five()
             loop_six()
     # Checking for staging
     if key == Key.space:
+        time.sleep(random.randrange(0, 5, 1))
         num = random.randrange(0,10,1)
         print(num)
         if num > 7:
@@ -156,6 +163,7 @@ def on_release(key):
             tab_out()
     # Checking for braking probably
     if key == KeyCode.from_char('b'):
+        time.sleep(random.randrange(0, 5, 1))
         num = random.randrange(0,10,1)
         if num > 6:
             keyboard.press('a')
@@ -170,6 +178,7 @@ def on_release(key):
             throttle()
             iva()
     if key == KeyCode.from_char('z'):
+        time.sleep(random.randrange(0, 5, 1))
         num = random.randrange(0,10,1)
         if num > 3:
             dethrottle()
